@@ -1,0 +1,18 @@
+[package]
+name = "kestrel"
+version = "0.1.0"
+edition = "2021"
+description = "Un framework web minimalista, seguro y modular construido sobre Axum, PostgreSQL y Caddy."
+
+[dependencies]
+tower = { version = "0.5", features = ["limit"] }
+tower_governor = "0.6"
+argon2 = "0.6.0"
+axum = "0.8"
+dotenvy = "0.15.7"
+rand = "0.10.2"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+sqlx = { version = "0.9.0", features = ["runtime-tokio", "postgres", "chrono"] }
+tokio = { version = "1", features = ["full"] }
+tower-http = { version = "0.6", features = ["fs"] }

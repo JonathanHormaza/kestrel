@@ -1,0 +1,34 @@
+services:
+  postgres-server:
+    image: postgres:16-alpine
+    container_name: postgres-server
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_DB: auth_db
+    volumes:
+      - pgdata_auth:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: always
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: caddy-proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - postgres-server
+
+volumes:
+  pgdata_auth:
+  caddy_data:
+  caddy_config:

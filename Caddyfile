@@ -1,0 +1,16 @@
+:80 {
+    reverse_proxy host.docker.internal:8080
+
+    request_body {
+        max_size 2MB
+    }
+
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    encode gzip zstd
+}
