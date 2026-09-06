@@ -23,3 +23,5 @@ Asegúrate de tener instalados los siguientes componentes en tu sistema:
 - [SQLx CLI](https://github.com/launchbadge/sqlx) (Opcional, para administrar migraciones):
   ```bash
   cargo install sqlx-cli --no-default-features --features postgres
+
+  ff
