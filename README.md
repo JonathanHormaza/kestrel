@@ -18,15 +18,8 @@ Before installing Kestrel, ensure you have the following installed on your syste
 
 The interactive installer will prompt you to choose the project name, whether to include PostgreSQL support (SQLx), and Docker/Caddy integration.
 
-<<<<<<< HEAD
-- [Rust & Cargo](https://www.rust-lang.org/) (Edición 2021)
-- [Docker](https://www.docker.com/) & [Docker Compose](https://docs.docker.com/compose/)
-- [SQLx CLI](https://github.com/launchbadge/sqlx) (Opcional, para administrar migraciones):
-  ```bash
-  cargo install sqlx-cli --no-default-features --features postgres
+---
 
-  ff
-=======
 ### 🐧 Linux (Fedora, Debian, Mint, Arch, Ubuntu) / 🍎 macOS
 
 Open your terminal and run:
