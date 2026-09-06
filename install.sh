@@ -4,22 +4,19 @@ set -e
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
 YELLOW='\033[1;33m'
-RED='\033[0;31m'
 NC='\033[0m'
 
 echo -e "${CYAN}====================================================${NC}"
 echo -e "${CYAN}    🦅  Welcome to the Kestrel Framework Installer   ${NC}"
 echo -e "${CYAN}====================================================${NC}\n"
 
-exec < /dev/tty
-
-read -p "1. Project Name [my-app]: " PROJECT_NAME
+read -p "1. Project Name [my-app]: " PROJECT_NAME < /dev/tty
 PROJECT_NAME=${PROJECT_NAME:-my-app}
 
-read -p "2. Include PostgreSQL support (SQLx)? (y/n) [y]: " INCLUDE_DB
+read -p "2. Include PostgreSQL support (SQLx)? (y/n) [y]: " INCLUDE_DB < /dev/tty
 INCLUDE_DB=${INCLUDE_DB:-y}
 
-read -p "3. Include Docker Compose (PostgreSQL + Caddy)? (y/n) [y]: " INCLUDE_DOCKER
+read -p "3. Include Docker Compose (PostgreSQL + Caddy)? (y/n) [y]: " INCLUDE_DOCKER < /dev/tty
 INCLUDE_DOCKER=${INCLUDE_DOCKER:-y}
 
 echo -e "\n${YELLOW}Creating project in './$PROJECT_NAME'...${NC}\n"
