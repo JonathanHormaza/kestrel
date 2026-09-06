@@ -25,7 +25,7 @@ The interactive installer will prompt you to choose the project name, whether to
 Open your terminal and run:
 
 ```bash
-curl -sSL [https://raw.githubusercontent.com/JonathanHormaza/kestrel/main/install.sh](https://raw.githubusercontent.com/JonathanHormaza/kestrel/main/install.sh) | bash
+curl -sSL https://raw.githubusercontent.com/JonathanHormaza/kestrel/main/install.sh | bash
 ```
 
 ### 🪟 Windows (PowerShell)
